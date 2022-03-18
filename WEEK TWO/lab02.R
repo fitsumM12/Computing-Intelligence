@@ -1,0 +1,17 @@
+library(FuzzyR)
+x = c(0,1,2,3,4,5,6)
+y = c(0.1,0.8,1,0.9,0.2,0.8,0.2)
+plot(x,y,type="h", col="red", xlab="number of children", ylab="fuzzy set", main="discrete order case 1")
+lines(x,y,type="l",lty=2, col="green")
+
+library(FuzzyR)
+x = c(0,5,8,2,4,5,6)
+y = c(0.1,0.8,1,0.9,0.2,0.8,0.2)
+plot(x,y,type="h", col="red", xlab="number of children", ylab="fuzzy set", main="discrete order case 2")
+lines(x,y,type="l",lty=2, col="green")
+
+library(FuzzyR)
+x = c(0,8,10,3,4,5,6)
+y = c(0.1,0.2,1,0.6,0,0.8,0.3)
+plot(x,y,type="h", col="red", xlab="number of children", ylab="fuzzy set", main="discrete order case 3")
+lines(x,y,type="l",lty=2, col="green")
