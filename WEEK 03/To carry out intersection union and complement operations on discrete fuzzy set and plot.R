@@ -68,8 +68,14 @@ ggplot(data=df, aes(x = x, y = mf12, group = 1))+
   geom_point(col="magenta")
 
 #Verification of T-Norm Identity Equation
-fuzzy_logic("zedah")
+fuzzy_logic("Zadeh")
 .T.(mf1, mf2)
 fuzzy_logic("product")
 .T.(mf1,mf2)
-fuzzy_logic("lukasiewi")
+fuzzy_logic("Lukasiewicz")
+.S.(mf1, mf2)
+fuzzy_logic("drastic")
+.S.(mf1, mf2)
+#Intersection :T-Norm -> Min
+#S-Norm -> Max
+#Complement
