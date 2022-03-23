@@ -46,3 +46,10 @@ A
 
 .T.(A,.S.(.N.(A),B))
 .T.(A,B)
+
+# DE-MORGANS LAW
+.N.(.S.(A,B))
+.T.(.N.(A), .N.(B))
+
+.N.(.T.(A,B))
+.S.(.N.(A),.N.(B))
