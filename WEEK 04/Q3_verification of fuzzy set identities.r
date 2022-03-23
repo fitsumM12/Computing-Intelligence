@@ -26,3 +26,17 @@ fuzzy_logic("Zadeh")
 #ASSOCIATIVITY
 .S.(.S.(A,B),C)
 .S.(A,.S.(B,C))
+
+#DISTRIBUTIVITY
+.S.(A,.T.(B,C))
+.T.(.S.(A,B),.S.(A,C))
+
+.T.(A,.T.(B,C))
+.S.(.T.(A,B),.T.(A,C))
+
+#ABSORPTION
+.S.(A,.T.(A,B))
+A
+.T.(A,.S.(A,B))
+A
+
