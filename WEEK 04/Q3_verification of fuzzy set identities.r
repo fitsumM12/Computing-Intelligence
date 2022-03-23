@@ -40,3 +40,9 @@ A
 .T.(A,.S.(A,B))
 A
 
+#ABSORPTION OF COMPLEMENT
+.S.(A,.T.(.N.(A),B))
+.S.(A,B)
+
+.T.(A,.S.(.N.(A),B))
+.T.(A,B)
