@@ -14,7 +14,7 @@ R <- matrix(mf1, nrow=4, ncol=3, byrow=TRUE)
 print(R)
 
 r1 <- 1:4
-r2 <- 1:2
+r2 <- 1:3
 c1 <- 1:3
 
 B_ <- matrix(c(0,0,0,0,0,0,0,0,0,0,0,0), nrow=4,ncol=3, byrow=TRUE)
