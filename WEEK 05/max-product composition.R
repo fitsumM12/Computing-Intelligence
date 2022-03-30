@@ -1,4 +1,4 @@
-#MAX-MIN COMPOSITION
+#MAX-PRODUCT COMPOSITION
 library(FuzzyR)
 library(sets)
 mf1 <- c(0.1, 0.3, 0.7, 
@@ -25,7 +25,7 @@ for(i in r1)
     R3[i,j]<-0
     for (k in c1)
     {
-      R3[i,j]<-max(R3[i,j], min(R1[i,k], R2[k,j]))
+      R3[i,j]<-max(R3[i,j], R1[i,k]*R2[k,j])
     }
   }
 }
