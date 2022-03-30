@@ -1,0 +1,14 @@
+library(FuzzyR)
+library(sets)
+## FUZZY IF THEN RULES
+# A*= Fact(fuzzy set on x)
+# B*= Qualified consequent(Fuzzy Set on Y)
+# R = A->B = Fuzzy Rule on XxY, where  A is anticident and B is consequent
+
+A_ <- c(0.1, 0.3, 0.7, 0.8)
+mf1 <- c(0.38, 0.8, 0.6, 0.2, 0.4, 0.9, 1, 0.8, 0.7, 0.6, 0.2, 0.26)
+R <- matrix(mf1, nrow=4, ncol=3, byrow=TRUE)
+print(R)
+
+B_ <- matrix(c(0,0,0,0,0,0,0,0,0,0,0,0), nrow=4,ncol=3, byrow=TRUE)
+print(B_)
