@@ -18,11 +18,11 @@ r2 <- 1:2
 c1 <- 1:3
 
 R3 <- matrix(c(0,0,0,0,0,0,0,0), nrow=4,ncol=2, byrow = TRUE)
+print(R3)
 for(i in r1)
 {
   for (j in r2)
   {
-    R3[i,j]<-0
     for (k in c1)
     {
       R3[i,j]<-max(R3[i,j], R1[i,k]*R2[k,j])
