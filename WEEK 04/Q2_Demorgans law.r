@@ -9,6 +9,10 @@ fuzzy_logic("Zadeh")
 #De-Morgan's laws
 #Right Hand Side 1st law
 .T.(A,B)
+A
+.N.(A)
+.N.(B)
+(.S.(.N.(A),.N.(B)))
 #Left Hand Side 1st law
 .N.(.S.(.N.(A), .N.(B)))
 #First Law proved
@@ -61,3 +65,4 @@ fuzzy_logic("drastic")
 #Left Hand Side 2st law
 .N.(.T.(.N.(A), .N.(B)))
 #Second law proved
+
