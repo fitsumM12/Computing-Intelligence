@@ -1,8 +1,8 @@
 library(FuzzyR)
 library(sets)
 # Find De-fuzzified values
-# Centroid
 
+# Centroid
 mf1<-genmf('trapmf', c(10,20,40,70))
 trap<-evalmf(0:100, mf1)
 plot(trap, type="l",main="Trapezoidal MF",lwd=3)
