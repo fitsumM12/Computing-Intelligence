@@ -33,5 +33,7 @@ abline(v=c(crisp_val_1, crisp_val_2,crisp_val_3,crisp_val_4), col=c("red","green
 # smallest of Maximum
 crisp_val_5  <- defuzz(0:100, trap,"som")
 print(crisp_val_5)
-abline(v=c(crisp_val_1, crisp_val_2,crisp_val_4,crisp_val_5), col=c("red","green","blue"),lty=2,lwd=3)
+abline(v=c(crisp_val_1, crisp_val_2,crisp_val_3,crisp_val_4,crisp_val_5), col=c("red","green","blue", "brown","orange"),lty=2,lwd=3)
+legend(90, 1, legend=c("COA","BOA","MOM","LOM","SOM"),
+       col=c("red","green","blue", "brown","orange"), lty=1:2, cex=0.8,lwd = 3)
 
