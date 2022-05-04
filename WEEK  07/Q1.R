@@ -31,3 +31,12 @@ system <- fuzzy_system(variables, rules)
 print(system)
 plot(system)
 
+values01 <- list(bmi=29, a1c=5, bp=20)
+fi <- fuzzy_inference(system, values01 )
+
+plot(fi)
+
+x_val = gset_defuzzify(fi, method="centroid")
+y_val = fi[round(x_val)]
+lines(x_val, fi[x_val], type = 'h', lty =2, col = "red")
+
