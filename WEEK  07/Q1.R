@@ -15,4 +15,6 @@ variables <- set(
                       sd = 3.0),
   alc = fuzzy_partion(varnames = c(l = 4, n = 5.25, h = 7),
                       FUN = fuzzy_cone, radius = 5),
+  bp = fuzzy_partition(varnames = c(norm = 0, pre = 10, hyp = 20, shyp = 30),
+                       sd = 2.5)
 )
