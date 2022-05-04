@@ -27,16 +27,14 @@ rules <- set(
   fuzzy_rule(bmi %is% fit && a1c %is% n && bp %is% norm,
              rating %is% PF)
 )
-system <- fuzzy_system(variables, rules)
+system<- fuzzy_system(variables, rules)
 print(system)
 plot(system)
 
-values01 <- list(bmi=29, a1c=5, bp=20)
-fi <- fuzzy_inference(system, values01 )
-
+fi <- fuzzy_inference(system, list(bmi=29, a1c==5, bp=20) )
 plot(fi)
 
 x_val = gset_defuzzify(fi, method="centroid")
 y_val = fi[round(x_val)]
 lines(x_val, fi[x_val], type = 'h', lty =2, col = "red")
-
+axis(1, at = x_val, las = 2)
