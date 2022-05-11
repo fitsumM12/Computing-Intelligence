@@ -37,10 +37,21 @@ system<- fuzzy_system(variables, rules)
 print(system)
 plot(system)
 
+# Dataset 01
 fi <- fuzzy_inference(system, list(temperature=75, humidity=0, precipitation=70))
 plot(fi)
-
 x_val = gset_defuzzify(fi, "centroid")
 y_val = fi[round(x_val)]
 lines(x_val, y_val, type = 'h', lty =2, col = "red")
 axis(1, at = x_val, las = 2)
+
+# Dataset 02
+fi_1 <- fuzzy_inference(system, list(temperature=30, humidity=0, precipitation=70))
+plot(fi_1)
+x_val = gset_defuzzify(fi_1, "largestofmax")
+y_val = gset_memberships(fi_1[round(x_val)])
+lines(x_val, y_val, type = 'h', lty =2, col = "red")
+axis(1, at = x_val, las = 2)
+gset_defuzzify(fi_1, "largestofmax")
+print(x_val)
+sets_options("universe",NULL)
