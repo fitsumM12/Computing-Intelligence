@@ -32,7 +32,7 @@ system<- fuzzy_system(variables, rules)
 print(system)
 plot(system)
 
-fi <- fuzzy_inference(system, list(bmi=29, a1c=5, bp=20))
+fi <- fuzzy_inference(system, list(bmi=30, a1c=30, bp=50))
 plot(fi)
 
 x_val = gset_defuzzify(fi, "centroid")
