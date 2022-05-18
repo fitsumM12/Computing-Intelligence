@@ -3,7 +3,7 @@
 ## install.packages("neuralnet")
 library(neuralnet)
 
-## creating training data set
+"## creating training data set
 traininginput =as.data.frame(runif(50, min=0, max=225))
 traininginput
 trainingoutput = sqrt(traininginput)
@@ -15,10 +15,10 @@ print(trainingdata)
 
 ## creating the neural network
 nn_1= neuralnet(trainingoutput~traininginput , data = trainingdata,
-                hidden = 10, threshold = 0.01, lifesign = "full", lifesign.step = 10,
+                hidden = 10, threshold = 0.01, lifesign = \"full\", lifesign.step = 10,
 )
 print(nn_1)
-plot(nn_1)
+plot(nn_1)"
 
 
 ## creating training dataset
