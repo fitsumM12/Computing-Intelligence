@@ -11,7 +11,7 @@ a testimonal  job placement  (placed = 5, not place = 0)
 ## install.packages("neuralnet")
 library(neuralnet)
 
-## creating training dataset
+## creating training data set
 ## TKS - technical knowledge score
 ## CSS - communication skills score
 ## placed - student placed
@@ -23,3 +23,18 @@ df = data.frame(TKS, CSS, placed)
 nn = neuralnet(placed~TKS+CSS, data = df, hidden = 3, 
                act.fct = "logistic", linear.output = FALSE)
 plot(nn)
+
+## Creating Testing Data set
+TKS = c(30, 40, 85)
+CSS = c(85, 50, 40)
+test = data.frame(TKS, CSS)
+
+## predicting the output  using NN(neural network)
+predict = compute(nn, test)
+predict$net.result
+
+
+## Converting probabilities into the binary classes
+prob = predict$net.result
+pred = ifelse(prob>0.5, 1, 0)
+pred
