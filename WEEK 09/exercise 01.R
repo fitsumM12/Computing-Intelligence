@@ -38,3 +38,5 @@ predict$net.result
 prob = predict$net.result
 pred = ifelse(prob>0.5, 1, 0)
 pred
+
+
