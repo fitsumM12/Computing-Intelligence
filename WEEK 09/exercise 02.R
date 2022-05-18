@@ -1,5 +1,5 @@
 ## Exp 10
-
+# Design a NN to obtain sqrt of input numbers
 ## install.packages("neuralnet")
 library(neuralnet)
 
