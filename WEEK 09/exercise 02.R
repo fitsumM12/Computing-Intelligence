@@ -27,7 +27,6 @@ train_out = c(0,1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
 train_data = data.frame(train_in,train_out)
 
 
-
 ## creating the neural network
 nn_01= neuralnet(train_out~train_in, data = train_data,
                      hidden = 10, threshold = 0.01, lifesign = "full", lifesign.step = 10,
